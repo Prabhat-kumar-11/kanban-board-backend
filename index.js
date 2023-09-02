@@ -21,7 +21,7 @@ app.use("/task" ,TaskRouter);
 app.use("/subtask",SubTaskRouter);
 app.use("/kanban-data", KanbanRouter);
 
-app.listen(8080, async () => {
+app.listen(process.env.PORT, async () => {
   try {
     await connectDB();
     console.log("mongodb connected..");
